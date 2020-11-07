@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+</head>
+<body>
+    <section class="wrapper">
+        <div class="container">
+            <h1>Todo App</h1>
+            <form class="form">
+                <input type="text" placeholder="Search Todo" name="search">
+            </form>
+            <ul>
+                <li class="flex">
+                    <span>to go see</span>
+                    <ion-icon name="trash-outline"></ion-icon>
+                </li>
+                <li class="flex">
+                    <span>building project</span>
+                    <ion-icon name="trash-outline"></ion-icon>
+                </li>
+                <li class="flex">
+                    <span>ninja stuff</span>
+                    <ion-icon name="trash-outline"></ion-icon>
+                </li>
+                <li class="flex">
+                    <span>workout</span>
+                    <ion-icon name="trash-outline"></ion-icon>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <form id="form">
+                <input type="text" name="add" placeholder="Add To Do">
+            </form>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
