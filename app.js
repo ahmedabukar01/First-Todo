@@ -1,5 +1,8 @@
 let form = document.querySelector('#form');
 let ul = document.querySelector('ul');
+let search = document.querySelector('.form input');
+
+
 form.addEventListener('submit', e=>{
     e.preventDefault();
     let Todo = form.add.value.trim();
@@ -30,4 +33,14 @@ ul.addEventListener('click',e=>{
     if(e.target.classList.contains('delete')){
         e.target.parentElement.remove();
     }
+});
+
+// filter function
+let filterTodo = (x)=>{
+    console.log(x)
+}
+// filtering
+search.addEventListener('keyup',()=>{
+    const term = search.value.trim();
+    filterTodo(term);
 })
