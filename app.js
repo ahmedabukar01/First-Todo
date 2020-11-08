@@ -11,14 +11,23 @@ form.addEventListener('submit', e=>{
     form.value
 });
 
+// creating html templete
+
 let createTemplete = todo=>{
     const html = `
     <li class="flex">
          <span>${todo}</span>
-        <ion-icon name="trash-outline"></ion-icon>
+        <ion-icon name="trash-outline" class="delete"></ion-icon>
     </li>
     `;
 
     ul.innerHTML +=html;
     
 }
+
+// delete todo
+ul.addEventListener('click',e=>{
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
+})
