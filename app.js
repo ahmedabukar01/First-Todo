@@ -36,11 +36,21 @@ ul.addEventListener('click',e=>{
 });
 
 // filter function
-let filterTodo = (x)=>{
-    console.log(x)
+let filterTodo = (term)=>{
+    Array.from(ul.children)
+    .filter((todo) => !todo.textContent.toLowerCase().includes(term))
+    .forEach(todo=>{
+        return todo.classList.add('filtered');
+    });
+
+    Array.from(ul.children)
+    .filter((todo) => todo.textContent.toLowerCase().includes(term))
+    .forEach(todo=>{
+        return todo.classList.remove('filtered');
+    });
 }
 // filtering
 search.addEventListener('keyup',()=>{
-    const term = search.value.trim();
+    const term = search.value.toLowerCase().trim();
     filterTodo(term);
 })
